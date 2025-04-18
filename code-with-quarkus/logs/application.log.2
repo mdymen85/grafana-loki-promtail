@@ -1,0 +1,30 @@
+"2025-04-18 12:19:03,093 INFO  [io.quarkus] (Quarkus Main Thread) code-with-quarkus 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.21.3) started in 2.620s. Listening on: http://localhost:8080
+" # Adjust format as needed"2025-04-18 12:19:03,097 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+" # Adjust format as needed"2025-04-18 12:19:03,099 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, rest, smallrye-context-propagation, vertx]
+" # Adjust format as needed"2025-04-18 12:19:09,411 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-1) HTTP Request to /hello failed, error id: 7e9f7e9f-6a37-436f-bc10-8a8e200a3004-1
+
+Exception in GreetingResource.java:17
+	  15      public String hello() {
+	  16          String hexValue = "0x019649652BD89E904D498887205F0F41";
+	→ 17          long decimalValue = Long.parseUnsignedLong(hexValue.substring(2), 16); // Remove "0x" and parse
+	  18          System.out.println("Hexadecimal: " + hexValue);
+	  19          System.out.println("Decimal: " + decimalValue);: java.lang.NumberFormatException: Error at index 17 in: "019649652BD89E904D498887205F0F4"
+	at java.base/java.lang.NumberFormatException.forCharSequence(NumberFormatException.java:83)
+	at java.base/java.lang.Long.parseLong(Long.java:794)
+	at java.base/java.lang.Long.parseUnsignedLong(Long.java:902)
+	at org.acme.GreetingResource.hello(GreetingResource.java:17)
+	at org.acme.GreetingResource$quarkusrestinvoker$hello_df324e1539083188359af68039a7afafb7b77cdb.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$15.runWith(VertxCoreRecorder.java:638)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2675)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2654)
+	at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1627)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1594)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+" # Adjust format as needed

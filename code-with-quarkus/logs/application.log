@@ -1,0 +1,4 @@
+"2025-04-18 15:28:20,826 INFO  [io.quarkus] (Quarkus Main Thread) code-with-quarkus 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.21.3) started in 2.730s. Listening on: http://localhost:8080
+" # Adjust format as needed"2025-04-18 15:28:20,830 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+" # Adjust format as needed"2025-04-18 15:28:20,831 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, rest, smallrye-context-propagation, vertx]
+" # Adjust format as needed
